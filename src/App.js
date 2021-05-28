@@ -1,6 +1,7 @@
 import './styles/App.css';
 import Navbar from './components/Navbar';
 import Overview from './components/Overview';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
           description="Snuggle up with your favorite painting or simply adorn your couch."
         />      
       </div>
+      <Footer />
   </div>
   );
 };
