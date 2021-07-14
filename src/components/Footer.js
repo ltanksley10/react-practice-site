@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
       backgroundColor: deepPurple[500]
-  },
-  link: {
-      paddingLeft: theme.spacing(1)
   }
 }));
 
@@ -33,13 +30,13 @@ const Footer = () => {
                     &copy; Lori Tanksley Art 
                 </Typography>
                 <Typography>
-                  <Link to="/contactpage" color="inherit" variant="subtitle2" className={classes.link}>
-                    Contact
+                  <Link to="/contactpage" color="inherit" variant="subtitle2" className="footerLink">
+                    Contact |
                   </Link>
-                  <Link to="/privacypolicy" color="inherit" variant="subtitle2" className={classes.link}>
-                    Privacy Policy    
+                  <Link to="/privacypolicy" color="inherit" variant="subtitle2" className="footerLink">
+                    Privacy Policy |
                   </Link>
-                  <Link to="/terms" color="inherit" variant="subtitle2" className={classes.link}>
+                  <Link to="/terms" color="inherit" variant="subtitle2" className="footerLink">
                     Terms
                   </Link>
                 </Typography>
