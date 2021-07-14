@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import deepPurple from '@material-ui/core/colors/deepPurple';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
   
   return (
     <div className={classes.root}>
@@ -34,13 +33,13 @@ const Footer = () => {
                     &copy; Lori Tanksley Art 
                 </Typography>
                 <Typography>
-                  <Link href="#" onClick={preventDefault} variant="subtitle2" color="inherit" className={classes.link}>
+                  <Link to="/contactpage" color="inherit" variant="subtitle2" className={classes.link}>
                     Contact
                   </Link>
-                  <Link href="#" onClick={preventDefault} variant="subtitle2" color="inherit" className={classes.link}>
+                  <Link to="/privacypolicy" color="inherit" variant="subtitle2" className={classes.link}>
                     Privacy Policy    
                   </Link>
-                  <Link href="#" onClick={preventDefault} variant="subtitle2" color="inherit" className={classes.link}>
+                  <Link to="/terms" color="inherit" variant="subtitle2" className={classes.link}>
                     Terms
                   </Link>
                 </Typography>
