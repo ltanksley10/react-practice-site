@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../styles/App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -34,6 +35,7 @@ const OverviewCard = (props) => {
 
   return (
     <Card className={classes.root}>
+    <Link to={props.to} className="cardLink">
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -49,9 +51,10 @@ const OverviewCard = (props) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      </Link>
       <CardActions className="cardAction">
         <Button size="small" className={classes.button}>
-          View More
+          <Link to={props.to} className="buttonLink">View More</Link>
         </Button>
       </CardActions>
     </Card>

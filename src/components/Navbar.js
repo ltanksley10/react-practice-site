@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -42,7 +43,7 @@ const NavBar = () => {
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
           <Typography variant="h6" className={classes.title} >
-            Lori Tanksley Art 
+              Lori Tanksley Art
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon onClick={handleClick} />
@@ -53,12 +54,12 @@ const NavBar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Original Artwork</MenuItem>
-                <MenuItem onClick={handleClose}>Available Prints</MenuItem>
-                <MenuItem onClick={handleClose}>T-Shirts</MenuItem>
-                <MenuItem onClick={handleClose}>Mugs</MenuItem>
-                <MenuItem onClick={handleClose}>Shower Curtains</MenuItem>
-                <MenuItem onClick={handleClose}>Blankets</MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/originalartwork" className="navbarLink">Original Artwork</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/availableprints" className="navbarLink">Available Prints</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/t-shirts" className="navbarLink">T-Shirts</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/mugs" className="navbarLink">Mugs</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/showercurtains" className="navbarLink">Shower Curtains</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link to="/blankets" className="navbarLink">Blankets</Link></MenuItem>
             </Menu>
           </IconButton>
         </Toolbar>
